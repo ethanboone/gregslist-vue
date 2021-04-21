@@ -30,13 +30,10 @@ export default {
 
     onMounted(async() => {
       try {
-        // debugger
-        console.log('get jobs')
         await jobsService.getJobs()
-        console.log('got jobs')
         state.loading = false
-      } catch (error) {
-        console.error(error)
+      } catch (e) {
+        console.error(e)
       }
     })
     return {
